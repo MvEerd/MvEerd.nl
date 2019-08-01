@@ -1,0 +1,158 @@
+body.dark-theme {
+  background: #272829;
+  .Portfolio {
+    color: #cacaca;
+    background: #272829;
+    .header {
+      background: #272829;
+    }
+    h2,
+    h3 {
+      color: #ffffff;
+    }
+    .info-border {
+      background: #ffffff;
+    }
+    .icon {
+      color: #ffffff;
+    }
+  }
+}
+
+.Portfolio {
+  color: #707070;
+  .header {
+    background: #ffffff;
+  }
+  h2,
+  h3 {
+    color: #000000;
+  }
+  .info-border {
+    background: #000000;
+  }
+}
+
+.accentbar {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(45deg, #b1ffbb, #99d7dc);
+}
+
+.header {
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2,
+h3 {
+  margin-bottom: 0px;
+}
+
+.Portfolio.fixed {
+  .header {
+    position: fixed;
+    .info-border {
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
+
+  .header-placeholder {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+.header-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.jobtitle {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.header-info {
+  width: 185px;
+}
+
+.info-border {
+  height: 2px;
+  width: 185px;
+  background: #000000;
+  transition: width 200ms ease, margin 200ms ease;
+  margin-left: 10%;
+}
+
+.header-social {
+  .icon {
+    font-size: 25px;
+    color: #000000;
+    margin-right: 5px;
+  }
+  display: flex;
+  font-size: 14px;
+}
+
+.linkedin {
+  margin-left: 10px;
+}
+
+.navmenu {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 185px;
+  align-items: center;
+  span {
+    height: 20px;
+  }
+}
+
+p {
+  line-height: 20px;
+}
+
+.ahref {
+  background: linear-gradient(45deg, #63b970, #4aa0a7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+@media all and (max-width: 480px) {
+  .header-container {
+    flex-flow: column;
+  }
+  .navmenu {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  .info-border {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .header-info {
+    font-size: 70%;
+  }
+  .header-social {
+    .icon {
+      font-size: 20px;
+    }
+    font-size: 12px;
+  }
+  .jobtitle {
+    font-size: 12px;
+  }
+}
