@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { ScrollableLink } from "react-update-url-on-scroll";
 import "./css/Portfolio.scss";
 
 function Header() {
@@ -28,9 +29,17 @@ function Header() {
           </div>
 
           <div className="navmenu">
-            <span>About</span>
-            <span>Work</span>
-            <span>Contact</span>
+            <ScrollableLink href="#about">
+              <a>About</a>
+            </ScrollableLink>
+            <span>
+              <ScrollableLink href="#work">
+                <a>Work</a>
+              </ScrollableLink>
+            </span>
+            <ScrollableLink href="#contact">
+              <a>Contact</a>
+            </ScrollableLink>
           </div>
         </div>
         <div className="info-border" />

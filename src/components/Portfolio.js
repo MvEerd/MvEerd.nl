@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import ScrollableSection, {
+  configureAnchors
+} from "react-update-url-on-scroll";
 import "./css/Portfolio.scss";
 import Header from "./Header";
 import About from "./About";
@@ -9,6 +12,7 @@ function Portfolio() {
 
   useEffect(() => {
     window.addEventListener("scroll", scrollHandler);
+    configureAnchors({ offset: 140, affectHistory: true });
   });
 
   const scrollHandler = e => {
@@ -19,8 +23,13 @@ function Portfolio() {
   return (
     <div className={`Portfolio ${scrolled ? "fixed" : ""}`}>
       <Header />
-      <About />
+      <ScrollableSection hash={"about"}>
+        <div>
+          <About />
+        </div>
+      </ScrollableSection>
       <div className="divider" />
+      <ScrollableSection hash={"work"}>
         <div className="container">
           <h2>Work</h2>
           <div className="devlabels">
@@ -30,7 +39,12 @@ function Portfolio() {
             <DevLabel text="Go" /> <DevLabel text="WebRTC" />{" "}
             <DevLabel text="Backend" /> <DevLabel text="Magento" />
           </div>
+      </ScrollableSection>
+      <ScrollableSection hash={"contact"}>
+        <div className="container">
+          <h2>Contact</h2>
         </div>
+      </ScrollableSection>
     </div>
   );
 }
