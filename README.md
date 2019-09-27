@@ -1,3 +1,3 @@
-# [Mveerd.nl](https://MvEerd.nl)
+# [MvEerd.nl](https://MvEerd.nl)
 
 ## Portfolio for Michael van Eerd
