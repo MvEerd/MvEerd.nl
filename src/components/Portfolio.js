@@ -6,6 +6,7 @@ import "./css/Portfolio.scss";
 import Header from "./Header";
 import About from "./About";
 import DevLabel from "./DevLabel";
+import ProjectThumb from "./ProjectThumb";
 
 function Portfolio() {
   let [scrolled, setScrolled] = useState(false);
@@ -39,6 +40,73 @@ function Portfolio() {
             <DevLabel text="Go" /> <DevLabel text="WebRTC" />{" "}
             <DevLabel text="Backend" /> <DevLabel text="Magento" />
           </div>
+          <div className="projects">
+            <ProjectThumb
+              title="byte.chat"
+              desc={
+                <>
+                  WebRTC video chat
+                  <br />
+                  Progressive web app
+                </>
+              }
+            />
+
+            <ProjectThumb title="Endurr" desc="Logo design" />
+
+            <ProjectThumb
+              title="cyclewear.eu"
+              desc={
+                <>
+                  Magento webshop configuration
+                  <br />
+                  custom extensions and migration
+                </>
+              }
+            />
+
+            <ProjectThumb title="synchrotu.be" desc={<>Video sync web app</>} />
+
+            <ProjectThumb title="cache.works" desc="" />
+
+            <ProjectThumb title="Obins" desc="Magento webshop" />
+
+            <ProjectThumb
+              title="Essentra"
+              desc={
+                <>
+                  Webshop maintenance
+                  <br />
+                  Google Adwords
+                  <br />
+                  SEO
+                </>
+              }
+            />
+
+            <ProjectThumb
+              title="APE.industries"
+              desc={
+                <>
+                  Magento webshop
+                  <br />
+                  Server management
+                </>
+              }
+            />
+
+            <ProjectThumb
+              title="wervingenadvies.nl"
+              desc={
+                <>
+                  Custom content management
+                  <br />
+                  Site design
+                </>
+              }
+            />
+          </div>
+        </div>
       </ScrollableSection>
       <ScrollableSection hash={"contact"}>
         <div className="container">
