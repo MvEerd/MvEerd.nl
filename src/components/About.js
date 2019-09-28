@@ -21,7 +21,14 @@ function About() {
           <br />
           <br />
           If I can help with a project you can reach me by emailing{" "}
-          <span className="ahref">michael@cache.works</span>
+          <a
+            className="ahref"
+            href="mailto:michael@cache.works"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            michael@cache.works
+          </a>
         </p>
       </div>
     </div>

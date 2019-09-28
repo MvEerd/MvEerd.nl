@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ScrollableSection, {
-  configureAnchors
-} from "react-update-url-on-scroll";
+import ScrollableSection from "react-update-url-on-scroll";
 import "./css/Portfolio.scss";
 import Header from "./Header";
 import About from "./About";
@@ -13,7 +11,6 @@ function Portfolio() {
 
   useEffect(() => {
     window.addEventListener("scroll", scrollHandler);
-    configureAnchors({ offset: 140, affectHistory: true });
   });
 
   const scrollHandler = e => {
@@ -52,7 +49,7 @@ function Portfolio() {
               }
             />
 
-            <ProjectThumb title="Endurr" desc="Logo design" />
+            <ProjectThumb title="ENDURR" desc="Logo design" />
 
             <ProjectThumb
               title="cyclewear.eu"
@@ -61,6 +58,8 @@ function Portfolio() {
                   Magento webshop configuration
                   <br />
                   custom extensions and migration
+                  <br />
+                  Google shopping feed
                 </>
               }
             />
@@ -85,7 +84,7 @@ function Portfolio() {
             />
 
             <ProjectThumb
-              title="APE.industries"
+              title="APE.Industries"
               desc={
                 <>
                   Magento webshop
@@ -111,6 +110,17 @@ function Portfolio() {
       <ScrollableSection hash={"contact"}>
         <div className="container">
           <h2>Contact</h2>
+          <h3>Michael van Eerd</h3>
+          <h3>
+            <a
+              className="ahref"
+              href="mailto:michael@cache.works"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              michael@cache.works
+            </a>
+          </h3>
         </div>
       </ScrollableSection>
     </div>
